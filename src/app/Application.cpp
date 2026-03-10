@@ -745,7 +745,14 @@ void Application::drawToolbar() {
         ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.30f, 0.60f, 0.40f, 1.0f));
         if (ImGui::Button("Run")) {
             isExecuting_ = true;
-            if (executor_) executor_->runAll();
+            if (executor_) {
+                executor_->runAll();
+                // Auto-preview selected node after execution
+                int selId = nodeEditor_->selectedNodeId();
+                if (selId >= 0) {
+                    executor_->previewNode(selId);
+                }
+            }
             isExecuting_ = false;
         }
         ImGui::PopStyleColor();
