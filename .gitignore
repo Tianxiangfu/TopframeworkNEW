@@ -1,0 +1,52 @@
+# Build directory (CMake generated files)
+/build/
+/build-*/
+/out/
+/cmake-build-*/
+
+# Visual Studio files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.user
+*.userosscache
+*.db
+*.opendb
+*.opensdf
+*.sdf
+ipch/
+.vs/
+
+# Compiled binaries
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.exp
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.cache
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ImGui layout (user-specific)
+imgui_layout.ini
+
+# Model files (optional, uncomment if you don't want to track large models)
+# /model/*.stl
+# /model/*.obj
