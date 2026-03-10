@@ -915,6 +915,9 @@ int Application::computeParamHash(int nodeId) const {
 }
 
 void Application::updateLivePreview() {
+    // Live preview disabled - only run on explicit Run button
+    return;
+
     int selId = nodeEditor_->selectedNodeId();
     if (selId < 0) {
         prevSelectedNodeId_ = -1;
